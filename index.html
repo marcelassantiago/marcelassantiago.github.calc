@@ -1,0 +1,96 @@
+
+<!-- digita (html e dar ENTER no 5) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon-16x16.png"> <!-- ICONE DO SITE -->
+
+    <link rel="stylesheet" href="style.css"/>
+    <title> Calculadora da Má </title>
+
+</head>
+
+<body>
+
+    <img src="pictures/seta21.png"> <br>
+
+
+                                        <!-- BR É QUEBRA DE LINHA -->
+    <div class="main">
+
+        <form action="" name="Calculator">
+
+            <!-- barra de saída -->
+            <input type="text" class="text maincolor" name="text1" disabled> <br>
+
+            <!-- RELOAD comando para apagar tudo no botão C da calculadora -->
+            <input type="button" class="text1 maincolor" name="text12" value="C" 
+                        onclick="location.reload()">
+
+            <!-- DEIXANDO MEU MÁ -->
+            <input type="text" class="text2 maincolor" name="marca" value="> Má <" disabled> <br>
+
+            <!-- adicionando os BOTÕES das primeiras 4 fileiras -->           
+            <input type="button" class="num maincolor" name="button9" value="9"
+                        onclick="displaynum(button9.value)">
+            <input type="button" class="num maincolor" name="button8" value="8"
+                        onclick="displaynum(button8.value)">
+            <input type="button" class="num maincolor" name="button7" value="7"
+                        onclick="displaynum(button7.value)">
+            <input type="button" class="num grey" name="addbutton" value="+"
+                        onclick="displaynum(addbutton.value)"> 
+            <br>
+
+            <!-- apenas repetindo os botões com o que cada um precisa/necessita-->
+            <input type="button" class="num maincolor" name="button6" value="6"
+                        onclick="displaynum(button6.value)">
+            <input type="button" class="num maincolor" name="button5" value="5"
+                        onclick="displaynum(button5.value)">
+            <input type="button" class="num maincolor" name="button4" value="4"
+                        onclick="displaynum(button4.value)">
+            <input type="button" class="num grey" name="subbutton" value="-"
+                        onclick="displaynum(subbutton.value)">
+            <br>
+
+            <!-- apenas repetindo os botões com o que cada um precisa/necessita-->
+            <input type="button" class="num maincolor" name="button3" value="3"
+                        onclick="displaynum(button3.value)">
+            <input type="button" class="num maincolor" name="button2" value="2"
+                        onclick="displaynum(button2.value)">
+            <input type="button" class="num maincolor" name="button1" value="1"
+                        onclick="displaynum(button1.value)">
+            <input type="button" class="num grey" name="multbutton" value="*"
+                        onclick="displaynum(multbutton.value)">
+            <br>
+
+            <!-- apenas repetindo os botões com o que cada um precisa/necessita-->
+            <input type="button" class="num maincolor" name="button0" value="0"
+                        onclick="displaynum(button0.value)">
+            <input type="button" class="num maincolor" name="pontobutton" value="."
+                        onclick="displaynum(pontobutton.value)">
+
+            <!-- comando para sair o resultado E NÃO IMPRIMIR A TECLA DO IGUAL, com ajuda do JS -->
+            <input type="button" class="num black" name="igualbutton" value="="
+                        onclick="text1.value=eval(text1.value)">
+
+
+            <input type="button" class="num grey" name="barrabutton" value="/"
+                        onclick="displaynum(barrabutton.value)">
+            <br>
+
+        </form>
+    </div>
+
+    <img src="pictures/mat.png">
+
+</body>
+
+<script src="script.js">   
+</script>
+
+</html>
